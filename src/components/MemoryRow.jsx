@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 
-export default function MemoryRow({ title, items, onCardClick }) {
+export default function MemoryRow({ title, subtitle, items, onCardClick, variant }) {
   const rowRef = useRef(null);
 
   const scroll = (direction) => {
@@ -16,7 +16,20 @@ export default function MemoryRow({ title, items, onCardClick }) {
 
   return (
     <div style={{ position: 'relative', marginBottom: '2.5rem' }}>
-      <h2 className="memory-row-title">{title}</h2>
+      {variant === 'memories' ? (
+        <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '1.25rem' }}>
+          <h2 style={{ fontSize: '1.5rem', color: '#fff', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em', fontFamily: 'var(--font-outfit)' }}>
+            {title}
+          </h2>
+          {subtitle && (
+            <span style={{ fontSize: '0.82rem', color: '#808080', marginTop: '0.2rem' }}>
+              {subtitle}
+            </span>
+          )}
+        </div>
+      ) : (
+        <h2 className="memory-row-title">{title}</h2>
+      )}
       
       <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
         {/* Scroll Left Button */}
@@ -64,36 +77,72 @@ export default function MemoryRow({ title, items, onCardClick }) {
           }}
         >
           {items.map((item, index) => (
-            <div 
-              key={item.id || index} 
-              className="memory-card"
-              onClick={() => onCardClick(item)}
-            >
-              <img 
-                src={item.img} 
-                className="memory-card-image" 
-                alt={item.title} 
-                loading="lazy"
-              />
-              
-              <div className="memory-card-overlay">
-                <div className="memory-card-title">{item.title}</div>
-                <div className="memory-card-meta">
-                  <span>{item.matchRate || '98% Match'}</span>
-                  <span>{item.year || '2025'}</span>
+            variant === 'memories' ? (
+              <div 
+                key={item.id || index} 
+                className="memories-card"
+                onClick={() => onCardClick(item)}
+              >
+                <div className="memories-card-image-wrapper">
+                  <img 
+                    src={item.img} 
+                    className="memories-card-image" 
+                    alt={item.title} 
+                    loading="lazy"
+                  />
                 </div>
                 
-                {/* Progress bar if present */}
-                {item.progress !== undefined && (
-                  <div className="progress-bar-container">
-                    <div 
-                      className="progress-bar-fill" 
-                      style={{ width: `${item.progress}%` }}
-                    />
+                <div className="memories-card-text">
+                  <div className="memories-card-meta">
+                    <span style={{ color: '#4ade80', fontWeight: '700' }}>{item.matchRate || '98% Match'}</span>
+                    <span>•</span>
+                    <span className="memories-card-badge">US</span>
+                    <span>•</span>
+                    <span>{item.year || '2024'}</span>
+                    <span>•</span>
+                    <span>HD</span>
                   </div>
-                )}
+                  
+                  <h3 className="memories-card-title">{item.title}</h3>
+                  <p className="memories-card-desc">{item.desc}</p>
+                  
+                  <div className="memories-card-tags">
+                    {item.tags || 'Romantic • Heartfelt • Original'}
+                  </div>
+                </div>
               </div>
-            </div>
+            ) : (
+              <div 
+                key={item.id || index} 
+                className="memory-card"
+                onClick={() => onCardClick(item)}
+              >
+                <img 
+                  src={item.img} 
+                  className="memory-card-image" 
+                  alt={item.title} 
+                  loading="lazy"
+                />
+                
+                <div className="memory-card-overlay">
+                  <div className="memory-card-title">{item.title}</div>
+                  <div className="memory-card-meta">
+                    <span>{item.matchRate || '98% Match'}</span>
+                    <span>{item.year || '2025'}</span>
+                  </div>
+                  
+                  {/* Progress bar if present */}
+                  {item.progress !== undefined && (
+                    <div className="progress-bar-container">
+                      <div 
+                        className="progress-bar-fill" 
+                        style={{ width: `${item.progress}%` }}
+                      />
+                    </div>
+                  )}
+                </div>
+              </div>
+            )
           ))}
         </div>
 

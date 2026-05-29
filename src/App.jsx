@@ -214,7 +214,8 @@ export default function App() {
       matchRate: '98% Match',
       year: '2024',
       location: 'Mountain Vista Café',
-      date: 'May 12, 2024'
+      date: 'May 12, 2024',
+      tags: 'Heartfelt • Adventure • Original'
     },
     {
       id: 't2',
@@ -224,7 +225,8 @@ export default function App() {
       matchRate: '96% Match',
       year: '2024',
       location: 'City Amphitheater',
-      date: 'Aug 18, 2024'
+      date: 'Aug 18, 2024',
+      tags: 'Heartfelt • Music • Romantic'
     },
     {
       id: 't3',
@@ -234,7 +236,8 @@ export default function App() {
       matchRate: '97% Match',
       year: '2024',
       location: 'Sandy Shores Beach',
-      date: 'July 5, 2024'
+      date: 'July 5, 2024',
+      tags: 'Sweet • Cozy • Original'
     },
     {
       id: 't4',
@@ -244,7 +247,8 @@ export default function App() {
       matchRate: '99.8% Perfect',
       year: '2025',
       location: 'The Glasshouse Bistro',
-      date: 'Oct 24, 2025'
+      date: 'Oct 24, 2025',
+      tags: 'Fancy • Anniversary • Special'
     }
   ];
 
@@ -304,13 +308,15 @@ export default function App() {
             
             <div className="rows-container">
               <MemoryRow 
-                title="Continue Watching" 
-                items={continueWatchingItems} 
+                title="Memories" 
+                subtitle="Click any card to read the full episode description and view reaction details."
+                items={trendingNowItems} 
                 onCardClick={setSelectedMemory} 
+                variant="memories"
               />
               <MemoryRow 
-                title="Trending Now" 
-                items={trendingNowItems} 
+                title="Top 4 Hits in Hearts Today" 
+                items={continueWatchingItems} 
                 onCardClick={setSelectedMemory} 
               />
               <MemoryRow 

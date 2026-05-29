@@ -1053,11 +1053,100 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Utility styles */
-.text-netflix-red { color: var(--netflix-red); }
-.text-amber { color: var(--accent-amber); }
-.font-outfit { font-family: var(--font-outfit); }
-.glow-text { text-shadow: 0 0 8px rgba(229, 9, 20, 0.6); }
+/* Memories Row Custom Card Styles */
+.memories-card {
+  position: relative;
+  flex: 0 0 290px;
+  display: flex;
+  flex-direction: column;
+  background-color: #181818;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid #222;
+}
+
+.memories-card-image-wrapper {
+  width: 100%;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  position: relative;
+}
+
+.memories-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.memories-card-text {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  background-color: #181818;
+}
+
+.memories-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  color: #808080;
+}
+
+.memories-card-badge {
+  font-size: 0.58rem;
+  border: 1px solid #e50914;
+  color: #e50914;
+  padding: 0.5px 3.5px;
+  border-radius: 2px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.memories-card-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.memories-card-desc {
+  font-size: 0.75rem;
+  color: #808080;
+  line-height: 1.4;
+  height: 2.8em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: left;
+}
+
+.memories-card-tags {
+  font-size: 0.65rem;
+  color: #e50914;
+  font-weight: 600;
+  text-align: left;
+}
+
+.memories-card:hover {
+  transform: scale(1.08) translateY(-5px);
+  z-index: 30;
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.memories-card:hover .memories-card-image {
+  transform: scale(1.05);
+}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
