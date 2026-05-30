@@ -172,47 +172,47 @@ export default function App() {
   const continueWatchingItems = [
     {
       id: 'c1',
-      title: 'Season 3: Building Dreams',
-      img: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80',
-      desc: 'An ongoing season packed with new career horizons, learning routines, and shared blueprints for the future.',
-      progress: 90,
+      title: 'LEARNING TO RIDE',
+      img: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80',
+      desc: 'Holding onto the seat, running behind me, and letting go. That was the day I learned to fly.',
       matchRate: '99% Match',
-      year: '2026',
-      location: 'Everywhere',
-      date: 'Ongoing'
+      year: '2023',
+      location: 'Park Lane',
+      date: 'June 15, 2023',
+      tags: 'Heartfelt • Inspiring • Original'
     },
     {
       id: 'c2',
-      title: 'Season 2: Moving In & Shared Keys',
-      img: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=600&q=80',
-      desc: 'The complete season covering the huge step of packing boxes, assembling furniture, and creating a shared home.',
-      progress: 100,
-      matchRate: '99.8% Match',
-      year: '2025',
-      location: 'Our Apartment',
-      date: 'July 2025'
+      title: 'CAMPFIRE CHRONICLES',
+      img: 'https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=600&q=80',
+      desc: 'Under a canopy of stars, listening to you spin tales of old adventures by the cracking fire.',
+      matchRate: '98% Match',
+      year: '2024',
+      location: 'Forest Retreat',
+      date: 'October 12, 2024',
+      tags: 'Heartfelt • Inspiring • Original'
     },
     {
       id: 'c3',
-      title: 'Season 1: First Steps & Sparks',
-      img: 'https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=600&q=80',
-      desc: 'The origin episodes. Nervous greetings, coffee meetups, road trips, and deciding to face the world together.',
-      progress: 100,
-      matchRate: '99.5% Match',
-      year: '2023',
-      location: 'City and Trails',
-      date: 'Oct - Dec 2023'
+      title: 'CATCHING THE FIRST FISH',
+      img: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80',
+      desc: 'Patiently showing me how to cast. The look of pure pride on your face was bigger than the catch.',
+      matchRate: '97% Match',
+      year: '2024',
+      location: 'Pine Lake',
+      date: 'July 8, 2024',
+      tags: 'Heartfelt • Inspiring • Original'
     },
     {
       id: 'c4',
-      title: 'Season 1.5: Travel & Adventures',
-      img: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=600&q=80',
-      desc: 'Exploring new cities, seeking quiet cafes, and documenting our journeys. The chapters where our bond grew deeper.',
-      progress: 100,
-      matchRate: '99.0% Match',
-      year: '2024',
-      location: 'Various Destinations',
-      date: 'Jan - Dec 2024'
+      title: 'THE ART OF HONESTY',
+      img: 'https://images.unsplash.com/photo-1533048347193-7b447a18f883?auto=format&fit=crop&w=600&q=80',
+      desc: 'When you showed me that doing the right thing, even when no one is looking, defines your true character.',
+      matchRate: '99.5% Match',
+      year: '2025',
+      location: 'Home',
+      date: 'September 5, 2025',
+      tags: 'Heartfelt • Inspiring • Original'
     }
   ];
 
@@ -294,7 +294,7 @@ export default function App() {
                 variant="memories"
               />
               <MemoryRow 
-                title="Top 4 Hits in Hearts Today" 
+                title="TOP 4 HITS IN HEARTS TODAY" 
                 items={continueWatchingItems} 
                 onCardClick={setSelectedMemory} 
                 variant="top4"
