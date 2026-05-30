@@ -24,26 +24,26 @@ export default function App() {
   const [isThemeSongPlaying, setIsThemeSongPlaying] = useState(false);
   const [likedMemories, setLikedMemories] = useState({});
   const [isEditingSpotlight, setIsEditingSpotlight] = useState(false);
-  const [spotlightTitle, setSpotlightTitle] = useState(() => 
+  const [spotlightTitle, setSpotlightTitle] = useState(() =>
     localStorage.getItem('spotlightTitle_v2') || "COLLEGE METRO\nDIARIES"
   );
-  const [spotlightSubtitle, setSpotlightSubtitle] = useState(() => 
+  const [spotlightSubtitle, setSpotlightSubtitle] = useState(() =>
     localStorage.getItem('spotlightSubtitle_v2') || "METRO TRAVELLING FOR COLLEGE"
   );
-  const [spotlightText, setSpotlightText] = useState(() => 
+  const [spotlightText, setSpotlightText] = useState(() =>
     localStorage.getItem('spotlightText_v2') || "Boarding the crowded metro coach every morning, finding space to stand close, and sharing a single pair of headphones. Those long rides to college became the best part of our day. Between the rush hours, the screeching tracks, and the announcements, we built our own quiet world, talking about everything and nothing. It wasn't just a commute; it was where we grew closer, one station at a time."
   );
-  const [spotlightQuote, setSpotlightQuote] = useState(() => 
+  const [spotlightQuote, setSpotlightQuote] = useState(() =>
     localStorage.getItem('spotlightQuote_v2') || "It is not the destination, but the journey—and who you share it with—that makes life beautiful."
   );
-  const [spotlightImage, setSpotlightImage] = useState(() => 
+  const [spotlightImage, setSpotlightImage] = useState(() =>
     localStorage.getItem('spotlightImage_v2') || "/couple_sunset_date.png"
   );
 
   const [galleryCards, setGalleryCards] = useState(() => {
     const saved = localStorage.getItem('galleryCards_v4');
     if (saved) {
-      try { return JSON.parse(saved); } catch (e) {}
+      try { return JSON.parse(saved); } catch (e) { }
     }
     return [
       {
@@ -96,9 +96,9 @@ export default function App() {
   };
 
   const [bucketList, setBucketList] = useState([
-    { id: 'b1', title: 'Road trip to the coast', done: false },
-    { id: 'b2', title: 'Couples cooking masterclass', done: false },
-    { id: 'b3', title: 'Pitch blankets for midnight stargazing', done: true },
+    { id: 'b1', title: 'Road trips', done: false },
+    { id: 'b2', title: 'Get rich together', done: false },
+    { id: 'b3', title: 'midnight stargazing', done: true },
     { id: 'b4', title: 'Write a joint future bucket list', done: false }
   ]);
 
@@ -140,7 +140,7 @@ export default function App() {
         notes.forEach((freq, index) => {
           const osc = audioCtx.createOscillator();
           const gain = audioCtx.createGain();
-          
+
           osc.type = 'sine'; // Pure warm tone
           osc.frequency.setValueAtTime(freq, now + index * 0.2); // Slightly arpeggiated entry
 
@@ -246,12 +246,12 @@ export default function App() {
         }
 
         setTimeout(() => container.remove(), 1200);
-      } catch (err) {}
+      } catch (err) { }
     }
   };
 
   const toggleBucketListItem = (itemId) => {
-    setBucketList(prev => prev.map(item => 
+    setBucketList(prev => prev.map(item =>
       item.id === itemId ? { ...item, done: !item.done } : item
     ));
   };
@@ -378,9 +378,9 @@ export default function App() {
 
   return (
     <div className="main-layout">
-      <Navbar 
-        activeTab={activeTab} 
-        setActiveTab={setActiveTab} 
+      <Navbar
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
         activeProfile={activeProfile}
         onSwitchProfile={handleSwitchProfile}
         isMusicPlaying={isMusicPlaying || isThemeSongPlaying}
@@ -392,19 +392,19 @@ export default function App() {
         {activeTab === 'home' && (
           <>
             <HeroBanner activeProfile={activeProfile} />
-            
+
             <div className="rows-container">
-              <MemoryRow 
-                title="Memories" 
+              <MemoryRow
+                title="Memories"
                 subtitle="Click any card to read the full episode description and view reaction details."
-                items={trendingNowItems} 
-                onCardClick={setSelectedMemory} 
+                items={trendingNowItems}
+                onCardClick={setSelectedMemory}
                 variant="memories"
               />
-              <MemoryRow 
-                title="TOP 5 HITS IN HEARTS TODAY" 
-                items={continueWatchingItems} 
-                onCardClick={setSelectedMemory} 
+              <MemoryRow
+                title="TOP 5 HITS IN HEARTS TODAY"
+                items={continueWatchingItems}
+                onCardClick={setSelectedMemory}
                 variant="top5"
               />
 
@@ -412,13 +412,13 @@ export default function App() {
               <div className="spotlight-section">
                 {/* Left Side Image Card */}
                 <div className="spotlight-image-wrapper">
-                  <video 
-                    src="/video.mp4" 
-                    className="spotlight-image" 
-                    autoPlay 
-                    loop 
-                    muted 
-                    playsInline 
+                  <video
+                    src="/video.mp4"
+                    className="spotlight-image"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                   />
                   <div className="spotlight-badge">
                     <span className="spotlight-badge-dot"></span>
@@ -457,7 +457,7 @@ export default function App() {
               </div>
 
               {/* Memories Gallery Wall Section */}
-              <GalleryWall 
+              <GalleryWall
                 cards={galleryCards}
                 onAddCard={handleAddGalleryCard}
               />
@@ -475,8 +475,8 @@ export default function App() {
                   gap: '1rem'
                 }}>
                   {bucketList.map((item) => (
-                    <div 
-                      key={item.id} 
+                    <div
+                      key={item.id}
                       onClick={() => toggleBucketListItem(item.id)}
                       style={{
                         padding: '1rem',
@@ -501,8 +501,8 @@ export default function App() {
                         e.currentTarget.style.borderColor = item.done ? 'var(--netflix-red)' : '#333';
                       }}
                     >
-                      <span style={{ 
-                        fontSize: '0.9rem', 
+                      <span style={{
+                        fontSize: '0.9rem',
                         color: item.done ? '#a3a3a3' : '#fff',
                         textDecoration: item.done ? 'line-through' : 'none'
                       }}>
@@ -531,8 +531,8 @@ export default function App() {
             </div>
 
             {/* Cinematic Ending Section */}
-            <CinematicEnding 
-              memories={[...trendingNowItems, ...continueWatchingItems]} 
+            <CinematicEnding
+              memories={[...trendingNowItems, ...continueWatchingItems]}
               isThemeSongPlaying={isThemeSongPlaying}
               onToggleThemeSong={handleToggleThemeSong}
               onNavigateToTimeline={() => setActiveTab('timeline')}
@@ -552,15 +552,15 @@ export default function App() {
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="modal-close-btn" onClick={() => setSelectedMemory(null)}>
               <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            
+
             <div className="modal-image-wrapper">
-              <img 
-                src={selectedMemory.img} 
-                className="modal-image" 
-                alt={selectedMemory.title} 
+              <img
+                src={selectedMemory.img}
+                className="modal-image"
+                alt={selectedMemory.title}
               />
               <div className="modal-gradient"></div>
               <div style={{
@@ -677,72 +677,72 @@ export default function App() {
           <div className="modal-content" onClick={(e) => e.stopPropagation()} style={{ maxWidth: '500px' }}>
             <button className="modal-close-btn" onClick={() => setIsEditingSpotlight(false)}>
               <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
             <div style={{ padding: '2rem' }}>
               <h2 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', fontFamily: 'var(--font-outfit)', textTransform: 'uppercase', color: '#fff' }}>
                 Customize Featured Story
               </h2>
-              
+
               <div style={{ marginBottom: '1rem' }}>
                 <label style={{ display: 'block', fontSize: '0.8rem', color: '#a3a3a3', marginBottom: '0.25rem', textTransform: 'uppercase', fontWeight: 700 }}>Title (Use Line Breaks if needed)</label>
-                <textarea 
+                <textarea
                   rows="3"
-                  value={spotlightTitle} 
-                  onChange={(e) => setSpotlightTitle(e.target.value)} 
+                  value={spotlightTitle}
+                  onChange={(e) => setSpotlightTitle(e.target.value)}
                   style={{ width: '100%', padding: '0.6rem', background: '#222', border: '1px solid #444', color: '#fff', borderRadius: '4px', fontFamily: 'inherit' }}
                 />
               </div>
 
               <div style={{ marginBottom: '1rem' }}>
                 <label style={{ display: 'block', fontSize: '0.8rem', color: '#a3a3a3', marginBottom: '0.25rem', textTransform: 'uppercase', fontWeight: 700 }}>Red Subtitle</label>
-                <input 
-                  type="text" 
-                  value={spotlightSubtitle} 
-                  onChange={(e) => setSpotlightSubtitle(e.target.value)} 
+                <input
+                  type="text"
+                  value={spotlightSubtitle}
+                  onChange={(e) => setSpotlightSubtitle(e.target.value)}
                   style={{ width: '100%', padding: '0.6rem', background: '#222', border: '1px solid #444', color: '#fff', borderRadius: '4px' }}
                 />
               </div>
 
               <div style={{ marginBottom: '1rem' }}>
                 <label style={{ display: 'block', fontSize: '0.8rem', color: '#a3a3a3', marginBottom: '0.25rem', textTransform: 'uppercase', fontWeight: 700 }}>Story Description</label>
-                <textarea 
+                <textarea
                   rows="4"
-                  value={spotlightText} 
-                  onChange={(e) => setSpotlightText(e.target.value)} 
+                  value={spotlightText}
+                  onChange={(e) => setSpotlightText(e.target.value)}
                   style={{ width: '100%', padding: '0.6rem', background: '#222', border: '1px solid #444', color: '#fff', borderRadius: '4px', resize: 'vertical' }}
                 />
               </div>
 
               <div style={{ marginBottom: '1rem' }}>
                 <label style={{ display: 'block', fontSize: '0.8rem', color: '#a3a3a3', marginBottom: '0.25rem', textTransform: 'uppercase', fontWeight: 700 }}>Bottom Quote</label>
-                <input 
-                  type="text" 
-                  value={spotlightQuote} 
-                  onChange={(e) => setSpotlightQuote(e.target.value)} 
+                <input
+                  type="text"
+                  value={spotlightQuote}
+                  onChange={(e) => setSpotlightQuote(e.target.value)}
                   style={{ width: '100%', padding: '0.6rem', background: '#222', border: '1px solid #444', color: '#fff', borderRadius: '4px' }}
                 />
               </div>
 
               <div style={{ marginBottom: '1.5rem' }}>
                 <label style={{ display: 'block', fontSize: '0.8rem', color: '#a3a3a3', marginBottom: '0.25rem', textTransform: 'uppercase', fontWeight: 700 }}>Image URL</label>
-                <input 
-                  type="text" 
-                  value={spotlightImage} 
-                  onChange={(e) => setSpotlightImage(e.target.value)} 
+                <input
+                  type="text"
+                  value={spotlightImage}
+                  onChange={(e) => setSpotlightImage(e.target.value)}
                   style={{ width: '100%', padding: '0.6rem', background: '#222', border: '1px solid #444', color: '#fff', borderRadius: '4px' }}
                 />
               </div>
 
               <div style={{ display: 'flex', gap: '10px', justifyContent: 'flex-end' }}>
-                <button 
+                <button
                   onClick={() => setIsEditingSpotlight(false)}
                   style={{ padding: '0.6rem 1.25rem', background: 'transparent', border: '1px solid #555', color: '#fff', borderRadius: '4px', cursor: 'pointer', fontWeight: 'bold' }}
                 >
                   Cancel
                 </button>
-                <button 
+                <button
                   onClick={() => setIsEditingSpotlight(false)}
                   style={{ padding: '0.6rem 1.25rem', background: 'var(--netflix-red)', border: 'none', color: '#fff', borderRadius: '4px', fontWeight: 'bold', cursor: 'pointer' }}
                 >
