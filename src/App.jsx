@@ -41,7 +41,7 @@ export default function App() {
   );
 
   const [galleryCards, setGalleryCards] = useState(() => {
-    const saved = localStorage.getItem('galleryCards');
+    const saved = localStorage.getItem('galleryCards_v2');
     if (saved) {
       try { return JSON.parse(saved); } catch (e) {}
     }
@@ -49,26 +49,32 @@ export default function App() {
       {
         id: 'g1',
         style: 'polaroid',
-        title: "Summer of '24",
+        title: "Silly Faces, Pure Joy",
         date: "2024",
-        desc: "A vintage snapshot of us before life became busy, full of energy and big dreams.",
-        img: "/couple_road_trip.png"
+        desc: "Sticking our tongues out and catching raw, unfiltered moments. Love is when you can be completely silly together.",
+        img: "/wall_slide1.jpg",
+        objectPosition: "center 15%",
+        aspectRatio: "3/4"
       },
       {
         id: 'g2',
-        style: 'cinematic',
-        title: "FIRST CHRISTMAS TOGETHER",
-        date: "2023",
-        desc: "Holding hands in front of the giant pine tree, shielding each other from the winter breeze.",
-        img: "/couple_campfire_night.png"
+        style: 'polaroid',
+        title: "Commute Companions",
+        date: "2024",
+        desc: "Sharing screen time, scrolling through memories, and finding a quiet, personal space in the middle of a busy metro coach.",
+        img: "/wall_slide2.jpg",
+        objectPosition: "center 20%",
+        aspectRatio: "3/4"
       },
       {
         id: 'g3',
         style: 'polaroid',
-        title: "Fixing the Apartment",
-        date: "2025",
-        desc: "Paint-stained hands, assembly blueprints, and that wide, proud smile after our first sofa was built.",
-        img: "/couple_first_date.png"
+        title: "Warm Dining Dates",
+        date: "2024",
+        desc: "Dressed up, leaning close, and sharing laughs in the cozy glow of our favorite restaurant.",
+        img: "/wall_slide3.png",
+        objectPosition: "center 20%",
+        aspectRatio: "3/4"
       }
     ];
   });
@@ -82,7 +88,7 @@ export default function App() {
   }, [spotlightTitle, spotlightSubtitle, spotlightText, spotlightQuote, spotlightImage]);
 
   useEffect(() => {
-    localStorage.setItem('galleryCards', JSON.stringify(galleryCards));
+    localStorage.setItem('galleryCards_v2', JSON.stringify(galleryCards));
   }, [galleryCards]);
 
   const handleAddGalleryCard = (newCard) => {

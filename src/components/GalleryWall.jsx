@@ -86,8 +86,8 @@ export default function GalleryWall({ cards, onAddCard }) {
               /* Polaroid Style Card (Light) */
               <div className="polaroid-card">
                 <div className="polaroid-tape"></div>
-                <div className="polaroid-image-container">
-                  <img src={card.img} alt={card.title} className="polaroid-image" />
+                <div className="polaroid-image-container" style={card.aspectRatio ? { aspectRatio: card.aspectRatio } : {}}>
+                  <img src={card.img} alt={card.title} className="polaroid-image" style={{ objectPosition: card.objectPosition || 'center 30%' }} />
                 </div>
                 <div className="polaroid-content">
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', width: '100%' }}>
@@ -100,8 +100,8 @@ export default function GalleryWall({ cards, onAddCard }) {
             ) : (
               /* Cinematic Style Card (Dark) */
               <div className="cinematic-card">
-                <div className="cinematic-image-container">
-                  <img src={card.img} alt={card.title} className="cinematic-image" />
+                <div className="cinematic-image-container" style={card.aspectRatio ? { aspectRatio: card.aspectRatio } : {}}>
+                  <img src={card.img} alt={card.title} className="cinematic-image" style={{ objectPosition: card.objectPosition || 'center 30%' }} />
                 </div>
                 <div className="cinematic-content">
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', width: '100%', marginBottom: '0.25rem' }}>
