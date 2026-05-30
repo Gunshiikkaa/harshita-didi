@@ -312,47 +312,51 @@ export default function App() {
   const trendingNowItems = [
     {
       id: 't1',
-      title: 'The Sunset Café Visit',
-      img: '/couple_sunset_date.png',
-      desc: 'Finding a quiet wooden cabin café in the mountain woods and watching the pine silhouettes in the sunset glow.',
-      matchRate: '98% Match',
-      year: '2024',
-      location: 'Mountain Vista Café',
-      date: 'May 12, 2024',
-      tags: 'Heartfelt • Adventure • Original'
+      title: 'THE METRO COMMUTE',
+      img: '/memory_slide1.jpg',
+      desc: 'Wearing masks, sharing a quiet ride on the metro, and holding onto each other through every single stop.',
+      matchRate: '98.5% Match',
+      year: '2023',
+      location: 'Metro Transit',
+      date: 'December 14, 2023',
+      tags: 'Sweet • Cozy • Daily Life',
+      objectPosition: 'center 20%'
     },
     {
       id: 't2',
-      title: 'Concert Under the Stars',
-      img: '/couple_campfire_night.png',
-      desc: 'Dancing to our favorite indie band on the lawn back-row with bags of popcorn and starry skies.',
-      matchRate: '96% Match',
+      title: 'EXPLORING QUTUB MINAR',
+      img: '/memory_slide2.jpg',
+      desc: 'Standing together in front of the historic carved red walls of Qutub Minar, holding a bag of treats, and making new memories in ancient places.',
+      matchRate: '99.1% Match',
       year: '2024',
-      location: 'City Amphitheater',
-      date: 'Aug 18, 2024',
-      tags: 'Heartfelt • Music • Romantic'
+      location: 'Delhi Heritage',
+      date: 'January 5, 2024',
+      tags: 'Adventure • Travel • Heartfelt',
+      objectPosition: 'center 25%'
     },
     {
       id: 't3',
-      title: 'Beachside Afternoon Picnic',
-      img: '/couple_beach_picnic.png',
-      desc: 'Surprise cheese board and lemonade on the warm sand, defending our sandwiches from ambitious seagulls.',
-      matchRate: '97% Match',
+      title: 'WARM SHOULDER TO LEAN ON',
+      img: '/memory_slide3.jpg',
+      desc: 'Leaning close, sharing a warm smile, and finding comfort in simply sitting side by side on a cozy afternoon.',
+      matchRate: '99% Match',
       year: '2024',
-      location: 'Sandy Shores Beach',
-      date: 'July 5, 2024',
-      tags: 'Sweet • Cozy • Original'
+      location: 'Cozy Corner',
+      date: 'March 22, 2024',
+      tags: 'Romantic • Warm • Cozy',
+      objectPosition: 'center 20%'
     },
     {
       id: 't4',
-      title: 'Anniversary Special Gala',
-      img: '/couple_anniversary_dinner.png',
-      desc: 'Celebrating our anniversary with fancy formal clothes, gourmet menus, and making plans for seasons to come.',
+      title: 'MATCHING SMILES & TURBANS',
+      img: '/memory_slide4.jpg',
+      desc: 'A bright pink turban, sweet matching smiles, and a picture-perfect moment captured for the scrapbook.',
       matchRate: '99.8% Perfect',
-      year: '2025',
-      location: 'The Glasshouse Bistro',
-      date: 'Oct 24, 2025',
-      tags: 'Fancy • Anniversary • Special'
+      year: '2024',
+      location: 'Home Studio',
+      date: 'April 18, 2024',
+      tags: 'Sweet • Cheerful • Original',
+      objectPosition: 'center 25%'
     }
   ];
 

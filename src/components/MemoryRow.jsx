@@ -106,6 +106,7 @@ export default function MemoryRow({ title, subtitle, items, onCardClick, variant
                     className="memories-card-image" 
                     alt={item.title} 
                     loading="lazy"
+                    style={{ objectPosition: item.objectPosition || 'center 30%' }}
                   />
                 </div>
                 
