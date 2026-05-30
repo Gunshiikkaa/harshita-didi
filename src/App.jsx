@@ -21,6 +21,7 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('home');
   const [selectedMemory, setSelectedMemory] = useState(null);
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);
+  const [isThemeSongPlaying, setIsThemeSongPlaying] = useState(false);
   const [likedMemories, setLikedMemories] = useState({});
   const [isEditingSpotlight, setIsEditingSpotlight] = useState(false);
   const [spotlightTitle, setSpotlightTitle] = useState(() => 
@@ -170,7 +171,9 @@ export default function App() {
   };
 
   const handleToggleMusic = () => {
-    if (isMusicPlaying) {
+    if (isThemeSongPlaying) {
+      setIsThemeSongPlaying(false);
+    } else if (isMusicPlaying) {
       stopAmbientMusic();
       setIsMusicPlaying(false);
     } else {
@@ -182,10 +185,21 @@ export default function App() {
     }
   };
 
+  const handleToggleThemeSong = () => {
+    if (isThemeSongPlaying) {
+      setIsThemeSongPlaying(false);
+    } else {
+      stopAmbientMusic();
+      setIsMusicPlaying(false);
+      setIsThemeSongPlaying(true);
+    }
+  };
+
   // Turn off music if profile is unmounted/switched
   const handleSwitchProfile = () => {
     stopAmbientMusic();
     setIsMusicPlaying(false);
+    setIsThemeSongPlaying(false);
     setActiveProfile(null);
     setActiveTab('home');
   };
@@ -354,7 +368,7 @@ export default function App() {
         setActiveTab={setActiveTab} 
         activeProfile={activeProfile}
         onSwitchProfile={handleSwitchProfile}
-        isMusicPlaying={isMusicPlaying}
+        isMusicPlaying={isMusicPlaying || isThemeSongPlaying}
         onToggleMusic={handleToggleMusic}
       />
 
@@ -495,7 +509,11 @@ export default function App() {
             </div>
 
             {/* Cinematic Ending Section */}
-            <CinematicEnding memories={[...trendingNowItems, ...continueWatchingItems]} />
+            <CinematicEnding 
+              memories={[...trendingNowItems, ...continueWatchingItems]} 
+              isThemeSongPlaying={isThemeSongPlaying}
+              onToggleThemeSong={handleToggleThemeSong}
+            />
           </>
         )}
 
@@ -735,6 +753,18 @@ export default function App() {
           </p>
         </div>
       </footer>
+      {isThemeSongPlaying && (
+        <iframe
+          width="0"
+          height="0"
+          src="https://www.youtube.com/embed/vvRo5tOU32Q?autoplay=1&enablejsapi=1"
+          title="Theme Song"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+          style={{ display: 'none', position: 'absolute', width: 0, height: 0, pointerEvents: 'none' }}
+        />
+      )}
     </div>
   );
 }

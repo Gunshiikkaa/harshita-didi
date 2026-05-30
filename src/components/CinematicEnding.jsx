@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-export default function CinematicEnding({ memories }) {
+export default function CinematicEnding({ memories, isThemeSongPlaying, onToggleThemeSong }) {
   const [confetti, setConfetti] = useState([]);
   const [celebrationActive, setCelebrationActive] = useState(false);
   const sectionRef = useRef(null);
@@ -627,16 +627,16 @@ export default function CinematicEnding({ memories }) {
             </button>
 
             <button
-              onClick={playChime}
+              onClick={onToggleThemeSong}
               style={{
-                backgroundColor: '#0c0c0c',
-                color: '#ccc',
+                backgroundColor: isThemeSongPlaying ? 'rgba(229, 9, 20, 0.15)' : '#0c0c0c',
+                color: isThemeSongPlaying ? 'var(--netflix-red)' : '#ccc',
                 fontWeight: '800',
                 fontSize: '0.85rem',
                 letterSpacing: '0.05em',
                 textTransform: 'uppercase',
                 padding: '0.75rem 1.75rem',
-                border: '1px solid #333',
+                border: isThemeSongPlaying ? '1px solid var(--netflix-red)' : '1px solid #333',
                 borderRadius: '50px',
                 cursor: 'pointer',
                 transition: 'all 0.2s ease',
@@ -645,17 +645,17 @@ export default function CinematicEnding({ memories }) {
                 gap: '8px'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = '#555';
-                e.currentTarget.style.color = '#fff';
+                e.currentTarget.style.borderColor = isThemeSongPlaying ? 'var(--netflix-red)' : '#555';
+                e.currentTarget.style.color = isThemeSongPlaying ? 'var(--netflix-red)' : '#fff';
                 e.currentTarget.style.transform = 'scale(1.04)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = '#333';
-                e.currentTarget.style.color = '#ccc';
+                e.currentTarget.style.borderColor = isThemeSongPlaying ? 'var(--netflix-red)' : '#333';
+                e.currentTarget.style.color = isThemeSongPlaying ? 'var(--netflix-red)' : '#ccc';
                 e.currentTarget.style.transform = 'scale(1)';
               }}
             >
-              Play Theme Song 🎵
+              {isThemeSongPlaying ? 'Pause Theme Song ⏸️' : 'Play Theme Song 🎵'}
             </button>
           </div>
         </div>
