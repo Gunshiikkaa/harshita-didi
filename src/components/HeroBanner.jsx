@@ -35,7 +35,8 @@ export default function HeroBanner({ activeProfile }) {
       year: "2026",
       seasons: "2 Seasons",
       tags: "Romantic • Feel-Good • Slice of Life",
-      isVideo: true
+      isVideo: true,
+      objectPosition: "center 15%"
     },
     {
       id: "slide-spark",
@@ -47,7 +48,8 @@ export default function HeroBanner({ activeProfile }) {
       matchRate: "98% Match",
       year: "2023",
       seasons: "Pilot Episode",
-      tags: "Heartfelt • Inspiring • Original"
+      tags: "Heartfelt • Inspiring • Original",
+      objectPosition: "center 8%"
     },
     {
       id: "slide-first-date",
@@ -59,7 +61,8 @@ export default function HeroBanner({ activeProfile }) {
       matchRate: "99% Match",
       year: "2023",
       seasons: "Episode 2",
-      tags: "Sweet • Cozy • Romantic"
+      tags: "Sweet • Cozy • Romantic",
+      objectPosition: "center 15%"
     },
     {
       id: "slide-road-trip",
@@ -196,6 +199,7 @@ export default function HeroBanner({ activeProfile }) {
                   width: '100%',
                   height: '100%',
                   objectFit: 'cover',
+                  objectPosition: slide.objectPosition || 'center 15%',
                   zIndex: 1,
                   opacity: idx === activeSlideIndex ? 0.55 : 0,
                   transition: 'opacity 1.2s ease-in-out',
@@ -217,6 +221,7 @@ export default function HeroBanner({ activeProfile }) {
                 width: '100%',
                 height: '100%',
                 objectFit: 'cover',
+                objectPosition: slide.objectPosition || 'center 15%',
                 zIndex: 1,
                 opacity: idx === activeSlideIndex ? 0.55 : 0,
                 transition: 'opacity 1.2s ease-in-out',
