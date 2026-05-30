@@ -114,9 +114,8 @@ export default function HeroBanner({ activeProfile }) {
             }}>N</span> TRIBUTE SERIES
           </div>
 
-          {/* Cinematic Title Layout */}
           <h1 className="hero-title" style={{ 
-            fontFamily: "'Cormorant Garamond', 'Georgia', serif", 
+            fontFamily: "'Cinzel', 'Georgia', serif", 
             fontSize: '3.6rem', 
             lineHeight: '1.05', 
             fontWeight: '400',

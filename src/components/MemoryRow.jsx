@@ -15,14 +15,14 @@ export default function MemoryRow({ title, subtitle, items, onCardClick, variant
   };
 
   return (
-    <div style={{ position: 'relative', marginBottom: '2.5rem' }}>
+    <div style={{ position: 'relative', marginBottom: '1.75rem' }}>
       {variant === 'memories' ? (
-        <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '1.25rem' }}>
-          <h2 style={{ fontSize: '1.5rem', color: '#fff', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em', fontFamily: 'var(--font-outfit)' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '0.75rem' }}>
+          <h2 className="memory-row-title" style={{ marginBottom: '0.15rem' }}>
             {title}
           </h2>
           {subtitle && (
-            <span style={{ fontSize: '0.82rem', color: '#808080', marginTop: '0.2rem' }}>
+            <span style={{ fontSize: '0.82rem', color: '#808080', marginTop: '0.1rem', textAlign: 'left' }}>
               {subtitle}
             </span>
           )}

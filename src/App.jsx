@@ -7,6 +7,7 @@ import Timeline from './components/Timeline';
 import DatePlanner from './components/DatePlanner';
 import MemoryVault from './components/MemoryVault';
 import SecretLetter from './components/SecretLetter';
+import GalleryWall from './components/GalleryWall';
 import './App.css';
 
 // Audio Context reference variables
@@ -37,6 +38,39 @@ export default function App() {
     localStorage.getItem('spotlightImage') || "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=800&q=80"
   );
 
+  const [galleryCards, setGalleryCards] = useState(() => {
+    const saved = localStorage.getItem('galleryCards');
+    if (saved) {
+      try { return JSON.parse(saved); } catch (e) {}
+    }
+    return [
+      {
+        id: 'g1',
+        style: 'polaroid',
+        title: "Summer of '24",
+        date: "2024",
+        desc: "A vintage snapshot of us before life became busy, full of energy and big dreams.",
+        img: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 'g2',
+        style: 'cinematic',
+        title: "FIRST CHRISTMAS TOGETHER",
+        date: "2023",
+        desc: "Holding hands in front of the giant pine tree, shielding each other from the winter breeze.",
+        img: "https://images.unsplash.com/photo-1543807535-eceef0bc6599?auto=format&fit=crop&w=600&q=80"
+      },
+      {
+        id: 'g3',
+        style: 'polaroid',
+        title: "Fixing the Apartment",
+        date: "2025",
+        desc: "Paint-stained hands, assembly blueprints, and that wide, proud smile after our first sofa was built.",
+        img: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80"
+      }
+    ];
+  });
+
   useEffect(() => {
     localStorage.setItem('spotlightTitle', spotlightTitle);
     localStorage.setItem('spotlightSubtitle', spotlightSubtitle);
@@ -44,6 +78,14 @@ export default function App() {
     localStorage.setItem('spotlightQuote', spotlightQuote);
     localStorage.setItem('spotlightImage', spotlightImage);
   }, [spotlightTitle, spotlightSubtitle, spotlightText, spotlightQuote, spotlightImage]);
+
+  useEffect(() => {
+    localStorage.setItem('galleryCards', JSON.stringify(galleryCards));
+  }, [galleryCards]);
+
+  const handleAddGalleryCard = (newCard) => {
+    setGalleryCards(prev => [newCard, ...prev]);
+  };
 
   const [bucketList, setBucketList] = useState([
     { id: 'b1', title: 'Road trip to the coast', done: false },
@@ -366,6 +408,12 @@ export default function App() {
                 </div>
               </div>
 
+              {/* Memories Gallery Wall Section */}
+              <GalleryWall 
+                cards={galleryCards}
+                onAddCard={handleAddGalleryCard}
+              />
+
               {/* Custom Interactive Row: Our List (Date Night Checklist) */}
               <div style={{ marginTop: '1rem' }}>
                 <h2 className="memory-row-title">My List (Date Night Bucket List)</h2>
@@ -654,7 +702,7 @@ export default function App() {
       <footer style={{
         backgroundColor: '#0c0c0c',
         borderTop: '1px solid #222',
-        padding: '3rem 4% 2rem',
+        padding: '1.5rem 4% 1.5rem',
         color: 'var(--text-grey)',
         fontSize: '0.8rem',
         zIndex: 10
