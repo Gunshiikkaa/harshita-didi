@@ -28,89 +28,66 @@ export default function HeroBanner({ activeProfile }) {
       id: "slide-main",
       title: "The Greatest Story Ever Told: US",
       desc: "An emotional, biographical documentary celebrating the shared adventures, late-night talks, and inside jokes of the ultimate dream team. Now streaming in each other's hearts forever.",
-      img: "/couple_sunset_date.png",
+      img: "/hero_slide1.jpg",
       date: "Forever & Always",
       subtitle: "👔 FEATURED DOCUMENTARY",
-      matchRate: "99% Match",
+      matchRate: "99.9% Match",
       year: "2026",
-      seasons: "2 Seasons",
+      seasons: "3 Seasons",
       tags: "Romantic • Feel-Good • Slice of Life",
-      isVideo: true,
-      objectPosition: "center 15%"
+      objectPosition: "center 20%"
     },
     {
-      id: "slide-spark",
-      title: "The First Spark",
-      desc: "Where it all began. A simple conversation that turned into late-night calls and nervous excitement.",
-      img: "/couple_first_date.png",
-      date: "October 2023",
-      subtitle: "✨ THE PREMIERE",
+      id: "slide-pizza",
+      title: "Pizza & Sofa Dates",
+      desc: "Nervous laughter, sharing a warm pizza, and realizing that doing the simplest things together makes for the best episodes of our story.",
+      img: "/hero_slide2.jpg",
+      date: "Cozy Evenings",
+      subtitle: "🍕 ROMANCE SPECIAL",
       matchRate: "98% Match",
-      year: "2023",
-      seasons: "Pilot Episode",
-      tags: "Heartfelt • Inspiring • Original",
-      objectPosition: "center 50%"
+      year: "2024",
+      seasons: "Episode 12",
+      tags: "Sweet • Cozy • Heartfelt",
+      objectPosition: "center 35%"
     },
     {
-      id: "slide-first-date",
-      title: "First Date Magic",
-      desc: "Nervous laughter, sharing a dessert we couldn't finish, and realizing this was something special.",
-      img: "/couple_sunset_date.png",
-      date: "November 2023",
-      subtitle: "☕ ROMANCE SPECIAL",
+      id: "slide-cozy",
+      title: "Cheering Each Other Up",
+      desc: "Cheering through challenges and finding comfort in the quietest moments, realizing that home isn't a place—it's a person.",
+      img: "/hero_slide3.jpg",
+      date: "Quiet Afternoons",
+      subtitle: "💖 SLICE OF LIFE",
       matchRate: "99% Match",
-      year: "2023",
-      seasons: "Episode 2",
-      tags: "Sweet • Cozy • Romantic",
-      objectPosition: "center 15%"
-    },
-    {
-      id: "slide-road-trip",
-      title: "Wanderlust Together",
-      desc: "Getting lost in new cities, sharing a single pair of headphones, and making memory lanes across the map.",
-      img: "/couple_road_trip.png",
-      date: "May 2024",
-      subtitle: "🚗 TRAVEL DOC",
-      matchRate: "97% Match",
-      year: "2024",
-      seasons: "Special Edition",
-      tags: "Adventure • Travel • Uplifting"
-    },
-    {
-      id: "slide-campfire",
-      title: "Campfire Nights",
-      desc: "Finding comfort in the quietest moments, sharing books, and making the perfect blanket fort under a canopy of stars.",
-      img: "/couple_campfire_night.png",
-      date: "December 2024",
-      subtitle: "🔥 Cozy special",
-      matchRate: "96% Match",
-      year: "2024",
-      seasons: "Episode 5",
-      tags: "Warm • Cosy • Emotional"
-    },
-    {
-      id: "slide-beach",
-      title: "Stronger Every Day",
-      desc: "Celebrating wins, cheering through challenges, and realizing that home isn't a place—it's a person.",
-      img: "/couple_beach_picnic.png",
-      date: "September 2025",
-      subtitle: "🌊 slice of life",
-      matchRate: "99.2% Match",
       year: "2025",
-      seasons: "Season 2 Finale",
-      tags: "Romantic • Inspiring • Original"
+      seasons: "Episode 24",
+      tags: "Romantic • Warm • Emotional",
+      objectPosition: "center 25%"
     },
     {
-      id: "slide-dinner",
-      title: "The Next Chapter",
-      desc: "Looking forward to thousands of more sunsets, shared pizzas, inside jokes, and adventures together.",
-      img: "/couple_anniversary_dinner.png",
-      date: "Forever & Always",
-      subtitle: "🕯️ ANNIVERSARY GALA",
-      matchRate: "99.8% Perfect",
-      year: "2026",
-      seasons: "Ongoing Series",
-      tags: "Fancy • Anniversary • Special"
+      id: "slide-dressed",
+      title: "Dressed for Memories",
+      desc: "Celebrating special occasions in formal clothes, matching styles, and making plans for all the beautiful seasons to come.",
+      img: "/hero_slide4.jpg",
+      date: "Gala Nights",
+      subtitle: "✨ CLASSY EDITION",
+      matchRate: "97% Match",
+      year: "2025",
+      seasons: "Special Episode",
+      tags: "Classy • Elegant • Love",
+      objectPosition: "center 25%"
+    },
+    {
+      id: "slide-event",
+      title: "Working as a Team",
+      desc: "Leading events, collaborating, and achieving milestones together. True partners in life, work, and everything in between.",
+      img: "/hero_slide5.jpg",
+      date: "Milestones",
+      subtitle: "🎓 WORKPLACE DOC",
+      matchRate: "96% Match",
+      year: "2025",
+      seasons: "Season 3",
+      tags: "Inspiring • Passionate • Collaborative",
+      objectPosition: "center 30%"
     }
   ];
 
@@ -433,7 +410,7 @@ export default function HeroBanner({ activeProfile }) {
             
             <div className="modal-image-wrapper">
               <img 
-                src="/couple_anniversary_dinner.png" 
+                src="/hero_slide4.jpg" 
                 className="modal-image" 
                 alt="Love Story info cover" 
               />
