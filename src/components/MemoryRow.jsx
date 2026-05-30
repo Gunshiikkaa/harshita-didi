@@ -85,7 +85,7 @@ export default function MemoryRow({ title, subtitle, items, onCardClick, variant
                   onClick={() => onCardClick(item)}
                 >
                   <div className="top5-card-image-container">
-                    <img src={item.img} className="top5-card-image" alt={item.title} />
+                    <img src={item.img} className="top5-card-image" alt={item.title} style={{ objectPosition: item.objectPosition || 'center 30%' }} />
                     <div className="top5-card-gradient"></div>
                     <div className="top5-card-title">{item.title}</div>
                   </div>

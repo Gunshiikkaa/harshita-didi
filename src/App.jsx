@@ -254,58 +254,63 @@ export default function App() {
   const continueWatchingItems = [
     {
       id: 'c1',
-      title: 'LEARNING TO RIDE',
-      img: '/couple_road_trip.png',
-      desc: 'Holding onto the seat, running behind me, and letting go. That was the day I learned to fly.',
+      title: 'LATE NIGHT TRANSIT',
+      img: '/top_slide1.jpg',
+      desc: 'Sharing giggles and taking silly selfies at the station platform, making waiting for the next train our favorite pastime.',
       matchRate: '99% Match',
-      year: '2023',
-      location: 'Park Lane',
-      date: 'June 15, 2023',
-      tags: 'Heartfelt • Inspiring • Original'
+      year: '2024',
+      location: 'Metro Station',
+      date: 'May 15, 2024',
+      tags: 'Heartfelt • Cheerful • Original',
+      objectPosition: 'center 20%'
     },
     {
       id: 'c2',
-      title: 'CAMPFIRE CHRONICLES',
-      img: '/couple_campfire_night.png',
-      desc: 'Under a canopy of stars, listening to you spin tales of old adventures by the cracking fire.',
+      title: 'LAZY PARK AFTERNOONS',
+      img: '/top_slide2.jpg',
+      desc: 'Relaxing on the grass, enjoying the sun and flowers, and having deep conversations under the shade.',
       matchRate: '98% Match',
       year: '2024',
-      location: 'Forest Retreat',
-      date: 'October 12, 2024',
-      tags: 'Heartfelt • Inspiring • Original'
+      location: 'Sunder Nursery',
+      date: 'October 10, 2024',
+      tags: 'Heartfelt • Relaxed • Peaceful',
+      objectPosition: 'center 40%'
     },
     {
       id: 'c3',
-      title: 'CATCHING THE FIRST FISH',
-      img: '/couple_beach_picnic.png',
-      desc: 'Patiently showing me how to cast. The look of pure pride on your face was bigger than the catch.',
+      title: 'SUNNY DAY ADVENTURES',
+      img: '/top_slide3.jpg',
+      desc: 'Walking in the bright sun, shielding our eyes, and smiling through the heat because we are together.',
       matchRate: '97% Match',
       year: '2024',
-      location: 'Pine Lake',
-      date: 'July 8, 2024',
-      tags: 'Heartfelt • Inspiring • Original'
+      location: 'City Walk',
+      date: 'February 22, 2024',
+      tags: 'Cheerful • Sunny • Romantic',
+      objectPosition: 'center 20%'
     },
     {
       id: 'c4',
-      title: 'THE ART OF HONESTY',
-      img: '/couple_first_date.png',
-      desc: 'When you showed me that doing the right thing, even when no one is looking, defines your true character.',
+      title: 'MATCHING CARGO VIBES',
+      img: '/top_slide4.jpg',
+      desc: 'Taking a stroll in matching pink outfits and cargo pants, showing off our style and coordination.',
       matchRate: '99.5% Match',
-      year: '2025',
-      location: 'Home',
-      date: 'September 5, 2025',
-      tags: 'Heartfelt • Inspiring • Original'
+      year: '2024',
+      location: 'Park Avenue',
+      date: 'March 8, 2024',
+      tags: 'Sweet • Stylish • Fun',
+      objectPosition: 'center 20%'
     },
     {
       id: 'c5',
-      title: 'OUR FOREVER SUNSET',
-      img: '/couple_sunset_date.png',
-      desc: 'Sitting by the golden ridge, watching the sun dip below the mountains, and realizing this is exactly where we belong.',
+      title: 'THE ULTIMATE HUG',
+      img: '/top_slide5.jpg',
+      desc: 'Leaning close, wrapping arms around each other, and capturing the warmth of our bond in a single frame.',
       matchRate: '99.9% Match',
       year: '2025',
-      location: 'Overlook Point',
-      date: 'September 15, 2025',
-      tags: 'Romantic • Cozy • Dreamy'
+      location: 'Campus Walk',
+      date: 'April 5, 2025',
+      tags: 'Romantic • Cozy • Warm',
+      objectPosition: 'center 25%'
     }
   ];
 
