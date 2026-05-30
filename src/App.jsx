@@ -202,6 +202,17 @@ export default function App() {
       year: '2023',
       location: 'City and Trails',
       date: 'Oct - Dec 2023'
+    },
+    {
+      id: 'c4',
+      title: 'Season 1.5: Travel & Adventures',
+      img: 'https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=600&q=80',
+      desc: 'Exploring new cities, seeking quiet cafes, and documenting our journeys. The chapters where our bond grew deeper.',
+      progress: 100,
+      matchRate: '99.0% Match',
+      year: '2024',
+      location: 'Various Destinations',
+      date: 'Jan - Dec 2024'
     }
   ];
 
@@ -315,14 +326,15 @@ export default function App() {
                 variant="memories"
               />
               <MemoryRow 
-                title="Top 4 Hits in Hearts Today" 
-                items={continueWatchingItems} 
-                onCardClick={setSelectedMemory} 
-              />
-              <MemoryRow 
                 title="Romantic Comedies" 
                 items={romanticComediesItems} 
                 onCardClick={setSelectedMemory} 
+              />
+              <MemoryRow 
+                title="Top 4 Hits in Hearts Today" 
+                items={continueWatchingItems} 
+                onCardClick={setSelectedMemory} 
+                variant="top4"
               />
 
               {/* Custom Interactive Row: Our List (Date Night Checklist) */}
