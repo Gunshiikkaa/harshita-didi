@@ -42,11 +42,11 @@ export default function Timeline() {
 
   return (
     <section className="timeline-section">
-      <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-        <h2 style={{ fontSize: '2.5rem', fontFamily: 'var(--font-outfit)', textTransform: 'uppercase' }}>
+      <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
+        <h2 style={{ fontSize: '2.5rem', fontFamily: "'Cinzel', 'Georgia', serif", textTransform: 'uppercase' }}>
           Our Milestone <span style={{ color: 'var(--netflix-red)' }}>Timeline</span>
         </h2>
-        <p style={{ color: 'var(--text-grey)', marginTop: '0.5rem', fontSize: '1.05rem' }}>
+        <p style={{ color: 'var(--text-grey)', marginTop: '0.35rem', fontSize: '0.9rem' }}>
           Chronological episodes of our journey together
         </p>
       </div>

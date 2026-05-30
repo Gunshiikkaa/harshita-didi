@@ -127,10 +127,11 @@ export default function IntroScreen({ onProfileSelect }) {
 
       <div style={{ position: 'relative', zIndex: 10, textAlign: 'center' }}>
         <h1 style={{ 
-          fontFamily: 'var(--font-outfit)', 
+          fontFamily: "'Cinzel', 'Georgia', serif", 
           fontWeight: 600, 
           fontSize: '3.5rem', 
-          marginBottom: '0.2rem',
+          marginBottom: '0.15rem',
+          letterSpacing: '0.02em',
           color: '#fff'
         }}>
           Who's watching?
@@ -142,12 +143,12 @@ export default function IntroScreen({ onProfileSelect }) {
           fontSize: '0.8rem',
           fontFamily: 'var(--font-outfit)',
           textTransform: 'uppercase',
-          marginBottom: '3rem'
+          marginBottom: '2rem'
         }}>
           Choose a profile to start streaming memories
         </p>
         
-        <div className="profile-list" style={{ gap: '3rem' }}>
+        <div className="profile-list" style={{ gap: '2.5rem' }}>
           {profiles.map((profile) => (
             <div 
               key={profile.name} 

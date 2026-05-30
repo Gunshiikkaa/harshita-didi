@@ -106,12 +106,12 @@ export default function MemoryVault({ onCardClick }) {
   });
 
   return (
-    <section style={{ padding: '4rem 4%', minHeight: '80vh' }}>
-      <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-        <h2 style={{ fontSize: '2.5rem', fontFamily: 'var(--font-outfit)', textTransform: 'uppercase' }}>
+    <section style={{ padding: '2rem 4%', minHeight: '80vh' }}>
+      <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
+        <h2 style={{ fontSize: '2.5rem', fontFamily: "'Cinzel', 'Georgia', serif", textTransform: 'uppercase' }}>
           Memory <span style={{ color: 'var(--netflix-red)' }}>Vault</span>
         </h2>
-        <p style={{ color: 'var(--text-grey)', marginTop: '0.5rem' }}>
+        <p style={{ color: 'var(--text-grey)', marginTop: '0.35rem', fontSize: '0.9rem' }}>
           Browse and filter our catalog of adventures, dates, and funny highlights.
         </p>
       </div>
@@ -122,7 +122,7 @@ export default function MemoryVault({ onCardClick }) {
         justifyContent: 'space-between',
         alignItems: 'center',
         gap: '1.5rem',
-        marginBottom: '2rem',
+        marginBottom: '1.25rem',
         flexWrap: 'wrap'
       }}>
         {/* Category Tabs */}

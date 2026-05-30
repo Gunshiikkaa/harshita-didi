@@ -67,7 +67,7 @@ export default function SecretLetter() {
   }, [passcode]);
 
   return (
-    <div style={{ padding: '4rem 4%', minHeight: '80vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+    <div style={{ padding: '2rem 4%', minHeight: '80vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
       
       {/* Floating Hearts Animation */}
       {hearts.length > 0 && (
@@ -94,11 +94,11 @@ export default function SecretLetter() {
 
       {!isUnlocked ? (
         <div className="lockbox-container">
-          <div style={{ fontSize: '3rem', marginBottom: '0.5rem' }}>🔒</div>
-          <h2 style={{ fontSize: '1.6rem', fontFamily: 'var(--font-outfit)', textTransform: 'uppercase', marginBottom: '0.25rem' }}>
+          <div style={{ fontSize: '2.5rem', marginBottom: '0.25rem' }}>🔒</div>
+          <h2 style={{ fontSize: '1.6rem', fontFamily: "'Cinzel', 'Georgia', serif", textTransform: 'uppercase', marginBottom: '0.15rem' }}>
             Secret Lockbox
           </h2>
-          <p style={{ color: 'var(--text-grey)', fontSize: '0.85rem', marginBottom: '1.5rem' }}>
+          <p style={{ color: 'var(--text-grey)', fontSize: '0.85rem', marginBottom: '1rem' }}>
             Please enter our anniversary passcode (MMDD) to unlock a private message.
           </p>
 
@@ -157,7 +157,7 @@ export default function SecretLetter() {
         </div>
       ) : (
         <div style={{ width: '100%', textAlign: 'center', animation: 'fadeIn 0.8s ease-out' }}>
-          <h2 style={{ fontSize: '2.5rem', fontFamily: 'var(--font-outfit)', textTransform: 'uppercase', marginBottom: '1.5rem' }}>
+          <h2 style={{ fontSize: '2.5rem', fontFamily: "'Cinzel', 'Georgia', serif", textTransform: 'uppercase', marginBottom: '1rem' }}>
             A Message <span style={{ color: 'var(--netflix-red)' }}>For You</span>
           </h2>
           

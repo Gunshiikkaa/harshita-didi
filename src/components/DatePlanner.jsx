@@ -144,11 +144,11 @@ export default function DatePlanner() {
 
   return (
     <div className="date-planner-container">
-      <div style={{ textAlign: 'center', marginBottom: '1.5rem' }}>
-        <h2 style={{ fontSize: '2rem', fontFamily: 'var(--font-outfit)', textTransform: 'uppercase' }}>
+      <div style={{ textAlign: 'center', marginBottom: '1rem' }}>
+        <h2 style={{ fontSize: '2rem', fontFamily: "'Cinzel', 'Georgia', serif", textTransform: 'uppercase' }}>
           Date Night <span style={{ color: 'var(--netflix-red)' }}>Planner</span>
         </h2>
-        <p style={{ color: 'var(--text-grey)', marginTop: '0.25rem' }}>
+        <p style={{ color: 'var(--text-grey)', marginTop: '0.2rem', fontSize: '0.9rem' }}>
           Can't decide what to do? Choose a mood and let the Date Planner recommend the perfect episode!
         </p>
       </div>
@@ -253,11 +253,11 @@ export default function DatePlanner() {
       {result && !isSpinning && (
         <div style={{
           maxWidth: '550px',
-          margin: '2.5rem auto 0',
+          margin: '1.25rem auto 0',
           backgroundColor: '#161616',
           border: '1px solid #333',
           borderRadius: '8px',
-          padding: '2rem',
+          padding: '1.25rem',
           textAlign: 'left',
           animation: 'scaleUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)'
         }}>

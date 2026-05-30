@@ -33,7 +33,7 @@ export default function GalleryWall({ cards, onAddCard }) {
   };
 
   return (
-    <section className="gallery-section" style={{ margin: '1.5rem 0' }}>
+    <section className="gallery-section" style={{ margin: '0.5rem 0' }}>
       {/* Header Container */}
       <div style={{
         display: 'flex',

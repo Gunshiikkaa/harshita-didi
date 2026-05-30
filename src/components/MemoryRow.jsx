@@ -15,7 +15,7 @@ export default function MemoryRow({ title, subtitle, items, onCardClick, variant
   };
 
   return (
-    <div style={{ position: 'relative', marginBottom: '1.75rem' }}>
+    <div style={{ position: 'relative', marginBottom: '0.75rem' }}>
       {variant === 'memories' ? (
         <div style={{ display: 'flex', flexDirection: 'column', marginBottom: '0.75rem' }}>
           <h2 className="memory-row-title" style={{ marginBottom: '0.15rem' }}>
