@@ -66,7 +66,7 @@ export default function MemoryRow({ title, subtitle, items, onCardClick, variant
         {/* Scroll Container */}
         <div 
           ref={rowRef} 
-          className={variant === 'top4' ? "top4-row-scroll" : "memory-row-scroll"}
+          className={variant === 'top5' ? "top5-row-scroll" : "memory-row-scroll"}
           onMouseEnter={() => {
             const btns = document.querySelectorAll('.row-arrow-btn');
             btns.forEach(btn => btn.style.opacity = 0.7);
@@ -77,19 +77,19 @@ export default function MemoryRow({ title, subtitle, items, onCardClick, variant
           }}
         >
           {items.map((item, index) => (
-            variant === 'top4' ? (
-              <div key={item.id || index} className="top4-card-wrapper">
-                <div className="top4-rank-number">{index + 1}</div>
+            variant === 'top5' ? (
+              <div key={item.id || index} className="top5-card-wrapper">
+                <div className="top5-rank-number">{index + 1}</div>
                 <div 
-                  className="top4-card"
+                  className="top5-card"
                   onClick={() => onCardClick(item)}
                 >
-                  <div className="top4-card-image-container">
-                    <img src={item.img} className="top4-card-image" alt={item.title} />
-                    <div className="top4-card-gradient"></div>
-                    <div className="top4-card-title">{item.title}</div>
+                  <div className="top5-card-image-container">
+                    <img src={item.img} className="top5-card-image" alt={item.title} />
+                    <div className="top5-card-gradient"></div>
+                    <div className="top5-card-title">{item.title}</div>
                   </div>
-                  <div className="top4-card-bottom-bar">
+                  <div className="top5-card-bottom-bar">
                     RECENTLY ADDED
                   </div>
                 </div>

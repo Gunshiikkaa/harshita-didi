@@ -281,6 +281,17 @@ export default function App() {
       location: 'Home',
       date: 'September 5, 2025',
       tags: 'Heartfelt • Inspiring • Original'
+    },
+    {
+      id: 'c5',
+      title: 'OUR FOREVER SUNSET',
+      img: '/couple_sunset_date.png',
+      desc: 'Sitting by the golden ridge, watching the sun dip below the mountains, and realizing this is exactly where we belong.',
+      matchRate: '99.9% Match',
+      year: '2025',
+      location: 'Overlook Point',
+      date: 'September 15, 2025',
+      tags: 'Romantic • Cozy • Dreamy'
     }
   ];
 
@@ -362,10 +373,10 @@ export default function App() {
                 variant="memories"
               />
               <MemoryRow 
-                title="TOP 4 HITS IN HEARTS TODAY" 
+                title="TOP 5 HITS IN HEARTS TODAY" 
                 items={continueWatchingItems} 
                 onCardClick={setSelectedMemory} 
-                variant="top4"
+                variant="top5"
               />
 
               {/* Featured Documentary Spotlight Section */}
