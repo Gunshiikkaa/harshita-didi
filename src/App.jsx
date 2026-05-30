@@ -41,7 +41,7 @@ export default function App() {
   );
 
   const [galleryCards, setGalleryCards] = useState(() => {
-    const saved = localStorage.getItem('galleryCards_v2');
+    const saved = localStorage.getItem('galleryCards_v4');
     if (saved) {
       try { return JSON.parse(saved); } catch (e) {}
     }
@@ -69,7 +69,7 @@ export default function App() {
       {
         id: 'g3',
         style: 'polaroid',
-        title: "Warm Dining Dates",
+        title: "After Party",
         date: "2024",
         desc: "Dressed up, leaning close, and sharing laughs in the cozy glow of our favorite restaurant.",
         img: "/wall_slide3.png",
@@ -88,7 +88,7 @@ export default function App() {
   }, [spotlightTitle, spotlightSubtitle, spotlightText, spotlightQuote, spotlightImage]);
 
   useEffect(() => {
-    localStorage.setItem('galleryCards_v2', JSON.stringify(galleryCards));
+    localStorage.setItem('galleryCards_v4', JSON.stringify(galleryCards));
   }, [galleryCards]);
 
   const handleAddGalleryCard = (newCard) => {
