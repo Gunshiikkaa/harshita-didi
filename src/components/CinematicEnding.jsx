@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-export default function CinematicEnding({ memories, isThemeSongPlaying, onToggleThemeSong }) {
+export default function CinematicEnding({ memories, isThemeSongPlaying, onToggleThemeSong, onNavigateToTimeline }) {
   const [confetti, setConfetti] = useState([]);
   const [celebrationActive, setCelebrationActive] = useState(false);
   const sectionRef = useRef(null);
@@ -596,7 +596,7 @@ export default function CinematicEnding({ memories, isThemeSongPlaying, onToggle
             gap: '1rem'
           }}>
             <button
-              onClick={handleCelebrate}
+              onClick={onNavigateToTimeline}
               style={{
                 backgroundColor: 'var(--netflix-red)',
                 color: '#fff',
@@ -623,7 +623,7 @@ export default function CinematicEnding({ memories, isThemeSongPlaying, onToggle
                 e.currentTarget.style.transform = 'scale(1)';
               }}
             >
-              Celebrate Us! 🥳
+              Our Timeline 📅
             </button>
 
             <button

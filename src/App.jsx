@@ -513,6 +513,7 @@ export default function App() {
               memories={[...trendingNowItems, ...continueWatchingItems]} 
               isThemeSongPlaying={isThemeSongPlaying}
               onToggleThemeSong={handleToggleThemeSong}
+              onNavigateToTimeline={() => setActiveTab('timeline')}
             />
           </>
         )}
