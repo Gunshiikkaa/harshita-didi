@@ -163,9 +163,9 @@ export default function SecretLetter() {
           
           <div className="love-letter-paper">
             <div className="love-letter-content">
-              <h3 className="love-letter-heading">Dearest Muskan,</h3>
+              <h3 className="love-letter-heading">Dearest Preet,</h3>
               <p style={{ textIndent: '2rem', marginBottom: '1.5rem' }}>
-                Every single day spent with you has felt like an incredible episode of my absolute favorite series. We have shared so many seasons already—from the nervous smiles and initial coffee dates of our pilot episode, to the road trips, late-night chats, culinary achievements (and disasters!), and moving into our cozy shared space.
+                Every single day spent with you has felt like an incredible episode of my absolute favorite series. We have shared so many seasons already—from the nervous smiles and initial debate discussions of our pilot episode, to the late-night chats, culinary achievements (and disasters!), and moving into our cozy shared space.
               </p>
               <p style={{ textIndent: '2rem', marginBottom: '1.5rem' }}>
                 You are my comfort when I am tired, my partner in laughter, my critic in film reviews, and my biggest source of happiness. Thank you for being exactly who you are, for loving me, and for writing this beautiful story with me day after day.
@@ -175,7 +175,7 @@ export default function SecretLetter() {
               </p>
               <div className="love-letter-footer">
                 <p>Always and forever yours,</p>
-                <p style={{ color: 'var(--netflix-red-hover)', fontSize: '2.4rem', marginTop: '0.5rem' }}>Vatsal ❤️</p>
+                <p style={{ color: 'var(--netflix-red-hover)', fontSize: '2.4rem', marginTop: '0.5rem' }}>Harshita ❤️</p>
               </div>
             </div>
           </div>

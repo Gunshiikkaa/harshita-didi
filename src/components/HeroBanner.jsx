@@ -462,7 +462,7 @@ export default function HeroBanner({ activeProfile }) {
               <div className="modal-side-info">
                 <div>
                   <div className="info-label">Starring:</div>
-                  <div className="info-value">Vatsal, Muskan</div>
+                  <div className="info-value">Vatsal, Harshita</div>
                 </div>
                 <div>
                   <div className="info-label">Genres:</div>
