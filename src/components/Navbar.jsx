@@ -143,28 +143,7 @@ export default function Navbar({
               boxShadow: '0 8px 16px rgba(0,0,0,0.5)',
               overflow: 'hidden'
             }}>
-              <button 
-                onClick={() => {
-                  setIsDropdownOpen(false);
-                  onSwitchProfile();
-                }}
-                style={{
-                  background: 'none',
-                  border: 'none',
-                  color: '#fff',
-                  padding: '12px 16px',
-                  fontSize: '0.85rem',
-                  textAlign: 'left',
-                  cursor: 'pointer',
-                  width: '100%',
-                  transition: 'background-color 0.2s ease',
-                  borderBottom: '1px solid #222'
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'rgba(255,255,255,0.08)'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
-              >
-                Switch Profiles
-              </button>
+
               <button 
                 onClick={() => {
                   setIsDropdownOpen(false);

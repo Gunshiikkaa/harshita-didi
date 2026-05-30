@@ -5,33 +5,13 @@ export default function IntroScreen({ onProfileSelect }) {
 
   const profiles = [
     {
-      name: 'Vatsal',
-      letter: 'V',
-      gradient: 'linear-gradient(135deg, #1e40af, #3b82f6)', // Blue/indigo gradient
-      badgeText: '👔 HE',
-      badgeColor: '#1d4ed8',
-      role: 'THE BOYFRIEND 👔',
-      avatarColor: '#1e40af',
-      emoji: '👔'
-    },
-    {
-      name: 'Muskan',
-      letter: 'M',
-      gradient: 'linear-gradient(135deg, #be185d, #ec4899)', // Red/pink gradient
-      badgeText: '👑 SHE',
-      badgeColor: '#db2777',
-      role: 'THE GIRLFRIEND 👑',
-      avatarColor: '#be185d',
-      emoji: '👑'
-    },
-    {
-      name: 'Both ❤️',
+      name: 'US',
       letter: '❤️',
-      gradient: 'linear-gradient(135deg, #b45309, #f59e0b)', // Amber/orange gradient
+      gradient: 'linear-gradient(135deg, #be185d, #ec4899)', // Premium pink/rose gradient
       badgeText: '💖 US',
-      badgeColor: '#d97706',
+      badgeColor: '#db2777',
       role: 'THE COUPLE 💖',
-      avatarColor: '#b45309',
+      avatarColor: '#be185d',
       emoji: '💖'
     }
   ];
