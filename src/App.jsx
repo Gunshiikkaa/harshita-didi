@@ -25,19 +25,19 @@ export default function App() {
   const [likedMemories, setLikedMemories] = useState({});
   const [isEditingSpotlight, setIsEditingSpotlight] = useState(false);
   const [spotlightTitle, setSpotlightTitle] = useState(() => 
-    localStorage.getItem('spotlightTitle') || "THE MOMENT\nTHAT CHANGED\nEVERYTHING"
+    localStorage.getItem('spotlightTitle_v2') || "COLLEGE METRO\nDIARIES"
   );
   const [spotlightSubtitle, setSpotlightSubtitle] = useState(() => 
-    localStorage.getItem('spotlightSubtitle') || "OUR FOREVER PROMISE"
+    localStorage.getItem('spotlightSubtitle_v2') || "METRO TRAVELLING FOR COLLEGE"
   );
   const [spotlightText, setSpotlightText] = useState(() => 
-    localStorage.getItem('spotlightText') || "It was a quiet Tuesday morning in October. I looked into your eyes for the first time, and in that split second, the weight of the entire universe shifted. I made a silent vow right then and there: to cherish you, support you, and love you more than life itself. Every single moment since that day has been my greatest honor."
+    localStorage.getItem('spotlightText_v2') || "Boarding the crowded metro coach every morning, finding space to stand close, and sharing a single pair of headphones. Those long rides to college became the best part of our day. Between the rush hours, the screeching tracks, and the announcements, we built our own quiet world, talking about everything and nothing. It wasn't just a commute; it was where we grew closer, one station at a time."
   );
   const [spotlightQuote, setSpotlightQuote] = useState(() => 
-    localStorage.getItem('spotlightQuote') || "You never know the value of a moment, until it becomes a memory that stays with you forever."
+    localStorage.getItem('spotlightQuote_v2') || "It is not the destination, but the journey—and who you share it with—that makes life beautiful."
   );
   const [spotlightImage, setSpotlightImage] = useState(() => 
-    localStorage.getItem('spotlightImage') || "/couple_sunset_date.png"
+    localStorage.getItem('spotlightImage_v2') || "/couple_sunset_date.png"
   );
 
   const [galleryCards, setGalleryCards] = useState(() => {
@@ -74,11 +74,11 @@ export default function App() {
   });
 
   useEffect(() => {
-    localStorage.setItem('spotlightTitle', spotlightTitle);
-    localStorage.setItem('spotlightSubtitle', spotlightSubtitle);
-    localStorage.setItem('spotlightText', spotlightText);
-    localStorage.setItem('spotlightQuote', spotlightQuote);
-    localStorage.setItem('spotlightImage', spotlightImage);
+    localStorage.setItem('spotlightTitle_v2', spotlightTitle);
+    localStorage.setItem('spotlightSubtitle_v2', spotlightSubtitle);
+    localStorage.setItem('spotlightText_v2', spotlightText);
+    localStorage.setItem('spotlightQuote_v2', spotlightQuote);
+    localStorage.setItem('spotlightImage_v2', spotlightImage);
   }, [spotlightTitle, spotlightSubtitle, spotlightText, spotlightQuote, spotlightImage]);
 
   useEffect(() => {
