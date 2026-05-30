@@ -406,10 +406,17 @@ export default function App() {
               <div className="spotlight-section">
                 {/* Left Side Image Card */}
                 <div className="spotlight-image-wrapper">
-                  <img src={spotlightImage} className="spotlight-image" alt="Featured spotlight" />
+                  <video 
+                    src="/video.mp4" 
+                    className="spotlight-image" 
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline 
+                  />
                   <div className="spotlight-badge">
                     <span className="spotlight-badge-dot"></span>
-                    FEATURED MEMORY
+                    FEATURED VIDEO
                   </div>
                   <button className="spotlight-edit-btn" onClick={() => setIsEditingSpotlight(true)}>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
