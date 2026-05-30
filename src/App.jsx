@@ -757,7 +757,7 @@ export default function App() {
         <iframe
           width="0"
           height="0"
-          src="https://www.youtube.com/embed/vvRo5tOU32Q?autoplay=1&enablejsapi=1"
+          src="https://www.youtube.com/embed/vvRo5tOU32Q?autoplay=1&enablejsapi=1&start=40"
           title="Theme Song"
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
