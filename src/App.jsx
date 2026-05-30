@@ -17,17 +17,7 @@ let musicTimer = null;
 let currentChordIdx = 0;
 
 export default function App() {
-  const usProfile = {
-    name: 'US',
-    letter: '❤️',
-    gradient: 'linear-gradient(135deg, #be185d, #ec4899)',
-    badgeText: '💖 US',
-    badgeColor: '#db2777',
-    role: 'THE COUPLE 💖',
-    avatarColor: '#be185d',
-    emoji: '💖'
-  };
-  const [activeProfile, setActiveProfile] = useState(usProfile);
+  const [activeProfile, setActiveProfile] = useState(null);
   const [activeTab, setActiveTab] = useState('home');
   const [selectedMemory, setSelectedMemory] = useState(null);
   const [isMusicPlaying, setIsMusicPlaying] = useState(false);

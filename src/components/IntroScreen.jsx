@@ -207,28 +207,7 @@ export default function IntroScreen({ onProfileSelect }) {
           ))}
         </div>
 
-        <button className="manage-profiles-btn" style={{
-          marginTop: '2rem',
-          border: '1px solid #444',
-          color: '#555',
-          fontSize: '0.85rem',
-          letterSpacing: '0.15em',
-          padding: '0.6rem 2rem',
-          backgroundColor: 'transparent',
-          fontFamily: 'var(--font-outfit)',
-          transition: 'all 0.2s ease'
-        }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.color = '#fff';
-          e.currentTarget.style.borderColor = '#fff';
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.color = '#555';
-          e.currentTarget.style.borderColor = '#444';
-        }}
-        >
-          Manage Profiles
-        </button>
+
       </div>
     </div>
   );
